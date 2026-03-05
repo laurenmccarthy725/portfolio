@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../homepage/index.css">
+    <link rel="stylesheet" href="../site/bootstrap.css">
+    <link rel="stylesheet" href="../site/boostrap.js">
+    <link rel="stylesheet" href="../site/jquery.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+      .carousel-img {
+        max-height: 280px;
+        object-fit: contain;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- NavBar Start -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../homepage/index.html"><img src="Lauren.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Analytics/analytics.html">Reporting & Dashboards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../MarketingMedia/Media.html">Marketing Media</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Automations/Automations.html">Automations & Integrations</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="../Personal/">Personal</a>
+          </li> -->
+
+            </ul>
+            <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+    <!-- NavBar End -->
+    <!-- Content Begin -->
+    <main>
+        <div class="container py-2">
+            <section class="py-2 text-center container">
+                <div class="headerimage">
+                    <div class="row py-lg-5">
+                      <img src="headerimage2.png">
+                        <div class="centered">
+                            <div class="leftcontent"><img class="image-headshot" src="headshot.png">
+                                <button class="contactbutton"><a href="mailto:laurenmccarthy725@gmail.com?subject=Hello, Lauren!">Contact Me</a></button>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-8 mx-auto"></div>
+                                <h1 class="fw-light">Hi, I'm Lauren McCarthy<br><i>eCRM & Digital Manager</i></h1>
+                                    <p class="fw-lighter">
+                                     You've already seen my career and technical credentials in my resume — this is more about how and why I do it.<br><br>
+My work lives at the intersection of marketing strategy, data infrastructure, and the people who need both. Over the past 9+ years, I've found that the most valuable thing I bring to a team isn't any single platform or skill set — it's the ability to sit in a room with an IT architect and a brand manager and make sure we're solving the same problem. I'm the person teams call when something breaks — a data flow, an automation, a campaign that needs a hard look, an integration speaking the wrong language — and I don't just escalate; I dig in until I understand it. I'm the first to admit when something is outside my immediate knowledge, and the first to come back with the answer and potential solutions.<br><br>
+The work you'll find here — the dashboards, the automation builds, the campaigns — is the output. But what I'm most proud of is the infrastructure underneath it, the cross-functional alignment, and the innovation that resulted. And yes — I built this site too!<br><br>
+                                      </p>
+                                    <div class="imagegrid">
+                                        <a href="../Analytics/analytics.html"><img src="Reporting.png"></a>
+                                        <a href="../MarketingMedia/Media.html"><img src="Media.png"></a>
+                                        <a href="../Automations/Automations.html"><img src="Automations.png"></a>
+                                        <a href="Lauren_McCarthy_Resume_2026.pdf" download><img src="Resume.png"></a>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </div>
+        </div>
+
+<!-- 3-Image Carousel Table Section Start -->
+<div class="container my-2">
+  <table class="table table-bordered text-center align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>References, Recommendations & Reviews</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+
+          <div id="homepageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="6.png" class="d-block w-100 carousel-img" alt="Reporting">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="10.png" class="d-block w-100 carousel-img" alt="Marketing Media">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="7.png" class="d-block w-100 carousel-img" alt="Automation">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="8.png" class="d-block w-100 carousel-img" alt="Automation">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="9.png" class="d-block w-100 carousel-img" alt="Automation">
+                  </div>
+                  <div class="col-md-4">
+                    <img src="5.png" class="d-block w-100 carousel-img" alt="Automation">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+
+          </div>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- 3-Image Carousel Table Section End -->
+
+    </main>
+
+    <!-- Required JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</body>
+</html>
