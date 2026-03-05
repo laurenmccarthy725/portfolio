@@ -1,38 +1,32 @@
-
-
 /* Layout */
 .headerimage {
   position: relative;
 }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #0D1317;
+.headerimage img {
+  width: 100%;
+  display: block;
 }
 
+/* Profile block */
+.profile-block {
+  padding: 0 8px;
+}
+
+/* Left content */
 .leftcontent {
-  float: left;
-  width: 350px;
-  margin: 0 10px;
-}
-
-.rightcontent {
-  float: right;
-  margin: 0 10px;
+  width: 220px;
+  min-width: 180px;
 }
 
 /* Image Grid (homepage nav tiles) */
 .imagegrid {
   --num-cols: 4;
-  --row-height: auto;
   box-sizing: border-box;
   padding: 16px;
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
-  grid-auto-rows: var(--row-height);
+  grid-auto-rows: auto;
   gap: 16px;
 }
 
@@ -42,22 +36,25 @@
   object-fit: cover;
 }
 
-.imagegrid > img:hover {
-  background-color: #2c3d43;
+.imagegrid > a > img:hover {
+  opacity: 0.85;
 }
 
 /* Headshot */
 .image-headshot {
-  width: 300px;
+  width: 100%;
+  max-width: 220px;
+  border-radius: 6px;
 }
 
 /* Contact Button */
 .contactbutton {
-  width: 100px;
+  width: 110px;
   text-decoration: none;
   background-color: #2c3d43;
-  margin-top: 20px;
+  border: none;
   border-radius: 5px;
+  padding: 6px 0;
 }
 
 .contactbutton a {
@@ -70,7 +67,7 @@
   font-weight: 300 !important;
   font-family: "Indie Flower", cursive;
   color: #0D1317;
-  margin-top: 40px;
+  margin-top: 20px;
   animation-name: textanimation;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -86,7 +83,7 @@
 .fw-lighter {
   font-weight: lighter !important;
   font-family: "Indie Flower", cursive;
-  padding: 20px;
+  padding: 10px 0;
 }
 
 /* Carousel */
@@ -95,30 +92,43 @@
   object-fit: contain;
 }
 
-/* Hero */
-.hero-image {
-  width: 1200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Footer */
-.footer {
-  width: auto;
-  color: whitesmoke;
-  align-content: center;
-}
-
-.footer img {
-  width: 150px;
-  display: inline;
-  padding: 50px;
-  margin-left: 10%;
-}
-
 /* Page background */
 body {
   background-image: linear-gradient(#156082, #2c3d43);
+}
+
+/* ── Mobile overrides ── */
+@media (max-width: 767px) {
+
+  /* Stack profile block vertically and center */
+  .profile-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftcontent {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* 2-col grid on small screens */
+  .imagegrid {
+    --num-cols: 2;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .fw-light {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .fw-lighter {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .carousel-img {
+    max-height: 200px;
+  }
 }
