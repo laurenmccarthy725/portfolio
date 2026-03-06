@@ -11,94 +11,69 @@
 </head>
 
 <body>
-  <!-- NavBar Start -->
+
+  <!-- NavBar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="homepage/Lauren.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="Analytics/analytics.html">Reporting & Dashboards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="MarketingMedia/Media.html">Marketing Media</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Automations/Automations.html">Automations & Integrations</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="index.html"><img src="homepage/Lauren.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="Analytics/analytics.html">Reporting & Dashboards</a></li>
+          <li class="nav-item"><a class="nav-link" href="MarketingMedia/Media.html">Marketing Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="Automations/Automations.html">Automations & Integrations</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <!-- NavBar End -->
 
   <main>
 
-    <!-- ── DESKTOP: header image with overlaid content ── -->
-    <div class="header-wrapper d-none d-md-block">
-      <img src="homepage/headerimage2.png" class="header-bg-img">
-      <div class="header-overlay">
-        <div class="leftcontent">
-          <img class="image-headshot" src="homepage/headshot.png">
-          <button class="contactbutton mt-3">
+    <!-- Hero section: background image with overlaid content -->
+    <div class="hero-section">
+      <div class="hero-content">
+
+        <!-- Left: headshot + button -->
+        <div class="hero-left">
+          <img class="image-headshot" src="homepage/headshot.png" alt="Lauren McCarthy">
+          <button class="contactbutton">
             <a href="mailto:laurenmccarthy725@gmail.com?subject=Hello, Lauren!">Contact Me</a>
           </button>
         </div>
-        <div class="header-text">
+
+        <!-- Right: bio text -->
+        <div class="hero-right">
           <h1 class="fw-light">Hi, I'm Lauren McCarthy<br><i>eCRM & Digital Manager</i></h1>
           <p class="fw-lighter">
             You've already seen my career and technical credentials in my resume — this is more about how and why I do it.<br><br>
-            My work lives at the intersection of marketing strategy, data infrastructure, and the people who need both. Over the past 9+ years, I've found that the most valuable thing I bring to a team isn't any single platform or skill set — it's the ability to sit in a room with an IT architect and a brand manager and make sure we're solving the same problem. I'm the person teams call when something breaks — a data flow, an automation, a campaign that needs a hard look, an integration speaking the wrong language — and I don't just escalate; I dig in until I understand it. I'm the first to admit when something is outside my immediate knowledge, and the first to come back with the answer and potential solutions.<br><br>
-            The work you'll find here — the dashboards, the automation builds, the campaigns — is the output. But what I'm most proud of is the infrastructure underneath it, the cross-functional alignment, and the innovation that resulted. And yes — I built this site too!
+            <span class="bio-extra">
+              My work lives at the intersection of marketing strategy, data infrastructure, and the people who need both. Over the past 9+ years, I've found that the most valuable thing I bring to a team isn't any single platform or skill set — it's the ability to sit in a room with an IT architect and a brand manager and make sure we're solving the same problem. I'm the person teams call when something breaks — a data flow, an automation, a campaign that needs a hard look, an integration speaking the wrong language — and I don't just escalate; I dig in until I understand it. I'm the first to admit when something is outside my immediate knowledge, and the first to come back with the answer and potential solutions.<br><br>
+              The work you'll find here — the dashboards, the automation builds, the campaigns — is the output. But what I'm most proud of is the infrastructure underneath it, the cross-functional alignment, and the innovation that resulted. And yes — I built this site too!
+            </span>
           </p>
+          <a href="#" id="bio-toggle" class="bio-toggle" onclick="toggleBio(event)">See more ▼</a>
         </div>
+
       </div>
     </div>
 
-    <!-- ── MOBILE: stacked layout, no header image ── -->
-    <div class="d-md-none container py-4">
-      <div class="mobile-profile text-center mb-4">
-        <img class="image-headshot" src="homepage/headshot.png">
-        <button class="contactbutton mt-3">
-          <a href="mailto:laurenmccarthy725@gmail.com?subject=Hello, Lauren!">Contact Me</a>
-        </button>
-      </div>
-      <div class="text-start">
-        <h1 class="fw-light text-center">Hi, I'm Lauren McCarthy<br><i>eCRM & Digital Manager</i></h1>
-        <p class="fw-lighter">
-          You've already seen my career and technical credentials in my resume — this is more about how and why I do it.
-          <span id="bio-more"></span>
-        </p>
-        <div id="bio-extra" style="display:none;">
-          <p class="fw-lighter">
-            My work lives at the intersection of marketing strategy, data infrastructure, and the people who need both. Over the past 9+ years, I've found that the most valuable thing I bring to a team isn't any single platform or skill set — it's the ability to sit in a room with an IT architect and a brand manager and make sure we're solving the same problem. I'm the person teams call when something breaks — a data flow, an automation, a campaign that needs a hard look, an integration speaking the wrong language — and I don't just escalate; I dig in until I understand it. I'm the first to admit when something is outside my immediate knowledge, and the first to come back with the answer and potential solutions.<br><br>
-            The work you'll find here — the dashboards, the automation builds, the campaigns — is the output. But what I'm most proud of is the infrastructure underneath it, the cross-functional alignment, and the innovation that resulted. And yes — I built this site too!
-          </p>
-        </div>
-        <a href="#" id="bio-toggle" class="bio-toggle" onclick="toggleBio(event)">See more ▼</a>
-      </div>
-    </div>
-
-    <!-- ── Nav image grid (both desktop and mobile) ── -->
+    <!-- Nav image grid -->
     <div class="container pb-4">
       <div class="imagegrid">
-        <a href="Analytics/analytics.html"><img src="homepage/Reporting.png"></a>
-        <a href="MarketingMedia/Media.html"><img src="homepage/Media.png"></a>
-        <a href="Automations/Automations.html"><img src="homepage/Automations.png"></a>
-        <a href="homepage/Lauren_McCarthy_Resume_2026.pdf" download><img src="homepage/Resume.png"></a>
+        <a href="Analytics/analytics.html"><img src="homepage/Reporting.png" alt="Reporting"></a>
+        <a href="MarketingMedia/Media.html"><img src="homepage/Media.png" alt="Media"></a>
+        <a href="Automations/Automations.html"><img src="homepage/Automations.png" alt="Automations"></a>
+        <a href="homepage/Lauren_McCarthy_Resume_2026.pdf" download><img src="homepage/Resume.png" alt="Resume"></a>
       </div>
     </div>
 
-    <!-- ── Carousel ── -->
+    <!-- Carousel -->
     <div class="container my-2">
       <table class="table table-bordered text-center align-middle">
         <thead class="table-light">
-          <tr>
-            <th>References, Recommendations & Reviews</th>
-          </tr>
+          <tr><th>References, Recommendations & Reviews</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -106,49 +81,27 @@
               <div id="homepageCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
 
-                  <!-- Slide 1 — desktop: 3 images, mobile: 1 -->
                   <div class="carousel-item active">
                     <div class="row">
-                      <div class="col-md-4 col-12 mb-2 mb-md-0">
-                        <img src="homepage/6.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                      </div>
-                      <div class="col-md-4 d-none d-md-block">
-                        <img src="homepage/10.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                      </div>
-                      <div class="col-md-4 d-none d-md-block">
-                        <img src="homepage/7.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                      </div>
+                      <div class="col-md-4 col-12"><img src="homepage/6.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                      <div class="col-md-4 d-none d-md-block"><img src="homepage/10.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                      <div class="col-md-4 d-none d-md-block"><img src="homepage/7.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
                     </div>
                   </div>
 
-                  <!-- Slide 2 -->
                   <div class="carousel-item">
                     <div class="row">
-                      <div class="col-md-4 col-12 mb-2 mb-md-0">
-                        <img src="homepage/8.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                      </div>
-                      <div class="col-md-4 d-none d-md-block">
-                        <img src="homepage/9.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                      </div>
-                      <div class="col-md-4 d-none d-md-block">
-                        <img src="homepage/5.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                      </div>
+                      <div class="col-md-4 col-12"><img src="homepage/8.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                      <div class="col-md-4 d-none d-md-block"><img src="homepage/9.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                      <div class="col-md-4 d-none d-md-block"><img src="homepage/5.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
                     </div>
                   </div>
 
-                  <!-- Mobile-only individual slides -->
-                  <div class="carousel-item d-md-none">
-                    <img src="homepage/10.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                  </div>
-                  <div class="carousel-item d-md-none">
-                    <img src="homepage/7.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                  </div>
-                  <div class="carousel-item d-md-none">
-                    <img src="homepage/9.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                  </div>
-                  <div class="carousel-item d-md-none">
-                    <img src="homepage/5.png" class="d-block w-100 carousel-img" alt="Recommendation">
-                  </div>
+                  <!-- Mobile-only slides -->
+                  <div class="carousel-item d-md-none"><img src="homepage/10.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                  <div class="carousel-item d-md-none"><img src="homepage/7.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                  <div class="carousel-item d-md-none"><img src="homepage/9.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
+                  <div class="carousel-item d-md-none"><img src="homepage/5.png" class="d-block w-100 carousel-img" alt="Recommendation"></div>
 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
@@ -169,18 +122,35 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script>
+    // Hide extra bio on mobile only
+    function initBio() {
+      var extra = document.querySelector('.bio-extra');
+      var toggle = document.getElementById('bio-toggle');
+      if (window.innerWidth < 768) {
+        extra.style.display = 'none';
+        toggle.style.display = 'inline';
+      } else {
+        extra.style.display = 'inline';
+        toggle.style.display = 'none';
+      }
+    }
+
     function toggleBio(e) {
       e.preventDefault();
-      var extra = document.getElementById('bio-extra');
+      var extra = document.querySelector('.bio-extra');
       var toggle = document.getElementById('bio-toggle');
       if (extra.style.display === 'none') {
-        extra.style.display = 'block';
+        extra.style.display = 'inline';
         toggle.textContent = 'See less ▲';
       } else {
         extra.style.display = 'none';
         toggle.textContent = 'See more ▼';
       }
     }
+
+    initBio();
+    window.addEventListener('resize', initBio);
   </script>
+
 </body>
 </html>
