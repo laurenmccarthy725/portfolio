@@ -22,6 +22,12 @@
   margin: 0 10px;
 }
 
+/* Navbar logo */
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
 /* Nav links - white text */
 .navbar-nav .nav-link {
   color: white !important;
@@ -206,11 +212,6 @@ body {
     font-size: 1.4rem;
   }
 
- .navbar-brand img {
-  height: 40px;
-  width: auto;
-}
- 
   .fw-lighter {
     color: white !important;
     font-size: 0.95rem;
