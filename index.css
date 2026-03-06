@@ -128,11 +128,11 @@ body {
 @media (max-width: 767px) {
 
   /* Hide the background header image on mobile */
-  .headerimage > img:first-child {
+  .header-bg-img {
     display: none;
   }
 
-  /* Convert overlay layout to normal stacked flow */
+  /* Reset overlay to normal document flow */
   .headerimage {
     position: static;
   }
@@ -143,67 +143,81 @@ body {
     top: auto;
     left: auto;
     color: white;
-    padding: 20px 16px;
+    padding: 24px 16px 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
-  /* Stack: headshot + button first, then text, then image grid */
+  /* Headshot + button: stacks first */
   .leftcontent {
     float: none;
-    width: auto;
-    margin: 0 0 20px 0;
+    width: 100%;
+    margin: 0 0 16px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    order: 1;
   }
 
   .image-headshot {
-    width: 180px;
+    width: 160px;
     border-radius: 50%;
   }
 
-  /* Text content block — stacks after headshot/button */
-  .col-lg-6.col-md-8.mx-auto {
-    width: 100%;
-    margin: 0 !important;
+  .contactbutton {
+    margin-top: 12px;
   }
 
-  /* White text on teal background */
+  /* Text block: stacks second */
+  .mobile-text-block {
+    order: 2;
+    width: 100%;
+  }
+
+  /* Image grid: stacks last */
+  .imagegrid {
+    order: 3;
+    --num-cols: 2;
+    padding: 8px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* White text on teal gradient background */
   .fw-light {
     color: white !important;
-    margin-top: 16px;
+    margin-top: 12px;
+    font-size: 1.4rem;
   }
 
   .fw-lighter {
     color: white !important;
+    font-size: 0.95rem;
+    padding: 10px 4px;
   }
 
-  /* Image grid goes to 2 columns on mobile */
-  .imagegrid {
-    --num-cols: 2;
-    padding: 8px;
-    gap: 10px;
+  /* Carousel */
+  .carousel-img {
+    max-height: 140px;
   }
 
-  /* Carousel arrows visible on dark bg */
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.35);
     border-radius: 50%;
-    padding: 10px;
   }
 
-  /* Carousel images smaller on mobile */
-  .carousel-img {
-    max-height: 160px;
-  }
-
-  /* Tighten up section padding */
+  /* Tighten page padding */
   .container.py-2 {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  section.py-2 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
