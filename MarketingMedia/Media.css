@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,300&display=swap');
+
 /* =====================
    CUSTOM STYLES
    ===================== */
@@ -15,13 +17,13 @@ body {
 /* Typography */
 .fw-light {
   font-weight: 300 !important;
-  font-family: "Indie Flower", cursive;
+  font-family: "Nunito", sans-serif;
   color: #0D1317;
 }
 
 .fw-lighter {
   font-weight: lighter !important;
-  font-family: "Indie Flower", cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Section headings in card area */
@@ -84,11 +86,12 @@ body {
   }
 
   /* Nav links - white text */
-.navbar-nav .nav-link {
-  color: white !important;
-}
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
 
-.navbar-nav .nav-link:hover {
-  color: #b0bec5 !important;
-}
+  .navbar-nav .nav-link:hover {
+    color: #b0bec5 !important;
+  }
+
 }
