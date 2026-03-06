@@ -2,6 +2,11 @@
    CUSTOM STYLES
    ===================== */
 
+/* Page background */
+body {
+  background-image: linear-gradient(#156082, #2c3d43);
+}
+
 /* Header image */
 .headerimage img {
   width: 100%;
@@ -17,6 +22,11 @@
 .fw-lighter {
   font-weight: lighter !important;
   font-family: "Indie Flower", cursive;
+}
+
+/* Section headings in card area */
+.album h2.fw-light {
+  color: #0D1317;
 }
 
 /* Carousel */
@@ -35,15 +45,20 @@
     display: none;
   }
 
-  /* Keep dark text since background is light */
+  /* White text on teal gradient background */
   .fw-light {
-    color: #0D1317 !important;
+    color: white !important;
     font-size: 1.6rem;
   }
 
   .fw-lighter {
-    color: #0D1317 !important;
+    color: white !important;
     font-size: 0.95rem;
+  }
+
+  /* Section headings stay dark since they're inside bg-light album area */
+  .album h2.fw-light {
+    color: #0D1317 !important;
   }
 
   /* Tighten section padding */
@@ -51,9 +66,10 @@
     padding-top: 0.75rem !important;
   }
 
-  /* Main content image full width on mobile */
-  table[style] {
-    width: 100% !important;
+  /* Cards: single column on mobile */
+  .row-cols-sm-2 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   /* Carousel images smaller on mobile */
