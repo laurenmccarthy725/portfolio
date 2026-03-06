@@ -224,4 +224,12 @@ body {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
+  /* Nav links - white text */
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b0bec5 !important;
+}
 }
