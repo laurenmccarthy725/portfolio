@@ -126,6 +126,15 @@ h3,
   }
 }
 
+/* Nav links - white text */
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b0bec5 !important;
+}
+
 h4,
 .h4 {
   font-size: calc(1.275rem + 0.3vw);
