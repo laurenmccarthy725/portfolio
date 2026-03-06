@@ -122,6 +122,11 @@ body {
   background-image: linear-gradient(#156082, #2c3d43);
 }
 
+/* Text block — fills remaining width next to floated headshot on desktop */
+.mobile-text-block {
+  overflow: hidden; /* creates block formatting context beside float */
+}
+
 /* =====================
    MOBILE RESPONSIVE
    ===================== */
